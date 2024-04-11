@@ -1,0 +1,185 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* Variables */
+:root {
+  --primary-color: #fb6a27;
+  --dark-color: #0f0f0f;
+  --gray-color: gray;
+  --h1-font-size: 40px;
+  --h2-font-size: 32px;
+  --smalt-font-size: 14px;
+}
+
+/* Reset Css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-transform: none;
+}
+
+/* Global CSS */
+section {
+  padding: 70px 0;
+}
+
+section .section-title {
+  font-size: var(--h2-font-size);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn-orange {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.text-orange {
+  color: var(--primary-color);
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+
+.fs-7 {
+  font-size: var(--smalt-font-size);
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: var(--primary-color);
+}
+/* CSS Per Section */
+
+/* Navbar */
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link.active {
+  color: var(--primary-color);
+}
+
+.navbar-nav .nav-link {
+  position: relative;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--primary-color);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+/* Header */
+.header-section .header-title {
+  font-size: var(--h1-font-size);
+}
+
+.header-section .header-skill {
+  color: var(--dark-color);
+  display: inline-flex;
+  align-items: center;
+}
+
+.header-section .header-skill:hover {
+  color: var(--primary-color);
+}
+
+.header-section .header-skill i {
+  transition: 0.3s;
+}
+
+.header-section .header-skill:hover i {
+  transform: rotate(-45deg);
+}
+
+.header-section .header-img {
+  width: 90%;
+}
+
+/* Portofolio */
+.portofolio-section .card .card-img-top {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .portofolio-section .card .card-img-top {
+    height: 100px;
+  }
+}
+
+/* Skills */
+.skills-section,
+footer {
+  background-color: #030304;
+}
+
+.skills-section .progress-bar {
+  margin-bottom: 20px;
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  background-color: var(--gray-color);
+}
+
+.skills-section .progress-bar .progress {
+  background-color: var(--primary-color);
+}
+
+.skills-circle {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  margin-left: 200px;
+}
+
+/* Refrensi Video */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.refrensi-circle {
+  display: block;
+  margin-top: 115px;
+  margin-left: 200px;
+}
+
+/* Conatct */
+.contact-section {
+  background-color: #f0f0f0;
+}
